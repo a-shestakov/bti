@@ -1,0 +1,7 @@
+%table#bti
+  - @rows.each_with_index do |row, row_index|
+    %tr
+      - row.each_with_index do |cell, cell_index|
+        - if cell_index.between?(1, 22)
+          %td
+            = cell.to_s

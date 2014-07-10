@@ -1,0 +1,25 @@
+#bti {
+  border-collapse: collapse;
+  td {
+    border: 1px solid lightgray;
+    font-size: 8pt;
+    font-family: Helvetica;
+  }
+}
+
+ul.marker-buttons {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.marker-button {
+  border: none;
+  background: none;
+  text-decoration: underline;
+  cursor: pointer;
+}

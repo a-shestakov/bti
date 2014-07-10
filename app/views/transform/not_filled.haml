@@ -1,0 +1,10 @@
+= javascript_include_tag 'not_filled.js.coffee'
+%script
+  window.citymap =
+  = @points_json.html_safe
+%ul.marker-buttons(style='float:left')
+  - @points.each do |point|
+    %li
+      %button.marker-button(onclick="window.showMarker('#{point[:name]}')" )
+        = point[:name]
+#map-canvas

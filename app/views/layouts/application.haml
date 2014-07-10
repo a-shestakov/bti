@@ -1,0 +1,16 @@
+!!!
+%html
+  %head
+    %meta{content: "initial-scale=1.0, user-scalable=no", name: "viewport"}/
+    %meta{charset: "utf-8"}/
+    = javascript_include_tag 'application'
+    = stylesheet_link_tag 'application'
+    %title Большая трамвайная инвентаризация
+    :css
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+  %body
+    = yield
