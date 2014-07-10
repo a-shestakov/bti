@@ -13,8 +13,15 @@ ul.marker-buttons {
   li {
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 4pt 0;
+    font-family: Helvetica, Arial;
+    font-size: 8pt;
   }
+}
+
+h3{
+  font-family: Helvetica, Arial;
+  font-weight: normal;
 }
 
 .marker-button {
@@ -22,4 +29,6 @@ ul.marker-buttons {
   background: none;
   text-decoration: underline;
   cursor: pointer;
+  font-family: Helvetica, Arial;
+  padding: 0;
 }

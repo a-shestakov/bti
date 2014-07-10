@@ -2,9 +2,18 @@
 %script
   window.citymap =
   = @points_json.html_safe
-%ul.marker-buttons(style='float:left')
-  - @points.each do |point|
-    %li
-      %button.marker-button(onclick="window.showMarker('#{point[:name]}')" )
-        = point[:name]
+%div(style='float:left; padding-left: 10pt; height: 100%; overflow: scroll; width: 200pt')
+  %h3
+    Показаны маркерами
+  %ul.marker-buttons
+    - @points.each do |point|
+      %li
+        %button.marker-button(onclick="window.showMarker('#{point[:name]}')" )
+          = point[:name]
+  %h3
+    Не показаны на карте
+  %ul.marker-buttons
+    - @unfilled_not_on_map.each do |name|
+      %li
+        = name
 #map-canvas

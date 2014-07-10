@@ -1,6 +1,6 @@
 initialize = ->
   mapOptions =
-    zoom: 13
+    zoom: 12
     center: new google.maps.LatLng(56.830891, 60.5949335)
     mapTypeId: google.maps.MapTypeId.TERRAIN
 
