@@ -35,6 +35,20 @@ class TransformController < ApplicationController
     @points_json = @points.to_json
   end
 
+  def redirect_to_ettu
+    require 'open-uri'
+    target_name = URI::decode(params[:name])
+    letter_doc = Nokogiri::HTML(open("http://mobile.ettu.ru/stations/" + URI::encode(target_name[0])), nil, 'UTF-8')
+    links = letter_doc.xpath('//a')
+    links.each do |link|
+      if link.content == target_name
+        redirect_to('http://mobile.ettu.ru' + link['href'])
+        return
+      end
+    end
+    render text: 'ok'
+  end
+
   private
 
   def get_trams_kml

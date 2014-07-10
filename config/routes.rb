@@ -1,6 +1,8 @@
 Bti::Application.routes.draw do
   get "transform/all"
   get "transform/not_filled"
+  get 'transform/redirect_to_ettu'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

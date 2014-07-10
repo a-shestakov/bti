@@ -13,9 +13,9 @@
         %button.marker-button(onclick="window.showMarker('#{point[:name]}')" )
           = point[:name]
   %h3
-    Не показаны на карте
+    Не показаны на карте (ссылки ведут на mobile.ettu.ru)
   %ul.marker-buttons
     - @unfilled_not_on_map.each do |name|
       %li
-        = name
+        = link_to name, '/transform/redirect_to_ettu?name=' + name
 #map-canvas
